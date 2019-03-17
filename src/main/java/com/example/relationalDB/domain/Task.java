@@ -5,7 +5,6 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "employee_master")
 public class Task {
 
     @Id

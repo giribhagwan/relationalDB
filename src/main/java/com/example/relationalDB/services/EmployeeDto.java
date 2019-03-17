@@ -1,20 +1,11 @@
-package com.example.relationalDB.domain;
+package com.example.relationalDB.services;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+public class EmployeeDto {
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "employee_master")
-public class EmployeeMaster {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty("empId")
     private Long empId;
     private String empName;
     private String empDesignation;
     private String empDepartment;
-
 
     public Long getEmpId() {
         return empId;
