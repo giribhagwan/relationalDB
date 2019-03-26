@@ -30,4 +30,7 @@ dependencies {
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('com.microsoft.sqlserver:mssql-jdbc')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile "com.itextpdf:html2pdf:2.0.1"
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
 }
