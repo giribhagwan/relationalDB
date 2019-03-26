@@ -1,4 +1,4 @@
-# Spring JPA examples [![MVC Structure](https://img.shields.io/badge/chat-on%20slack-ff69b4.svg)](http://slack.opengee.org) [![build](https://travis-ci.org/google/earthenterprise.svg?branch=master)](https://travis-ci.org/google/earthenterprise/builds)
+# Spring JPA examples [![Spring WebMVC Application](http://b.repl.ca/v1/spring-mvc-blue.png)](#SWMVC)
 
 ### Releases
 
