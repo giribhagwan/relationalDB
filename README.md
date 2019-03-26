@@ -1,4 +1,5 @@
-# Spring JPA Examples [![relationDB] [![MVC Structure] [![build]
+# Earth Enterprise [![Chat on Slack](https://img.shields.io/badge/chat-on%20slack-ff69b4.svg)](http://slack.opengee.org) [![build](https://travis-ci.org/google/earthenterprise.svg?branch=master)](https://travis-ci.org/google/earthenterprise/builds)
+
 ### Releases
 
 * MVC Structure 
