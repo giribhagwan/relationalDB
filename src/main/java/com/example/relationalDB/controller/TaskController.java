@@ -1,6 +1,7 @@
 package com.example.relationalDB.controller;
 
 import com.example.relationalDB.domain.Task;
+import com.example.relationalDB.receipt.ReceiptGeneration;
 import com.example.relationalDB.services.TaskDto;
 import com.example.relationalDB.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
+    @Autowired
+    private ReceiptGeneration receiptGeneration;
+
     @PostMapping("/saveTask")
     public Callable<ResponseEntity<?>> saveTask(TaskDto taskDto) {
         return () -> {
@@ -56,11 +60,11 @@ public class TaskController {
     @RequestMapping(path = "/download", method = RequestMethod.GET)
     public ResponseEntity<Resource> download(String param) throws IOException {
 
-        File file=new File("text.txt");
-
+//        File file=new File("text.txt");
+        File file=new File(receiptGeneration.generate("text.pdf"));
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
         HttpHeaders headers = new HttpHeaders();
-        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=myDoc.txt");
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=text.pdf");
         return ResponseEntity.ok()
                 .headers(headers)
                 .contentLength(file.length())
