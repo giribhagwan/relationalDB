@@ -9,14 +9,15 @@ import java.io.IOException;
 @Component
 public class ReceiptGeneration {
 
-    File file;
+	File htmlTemplateFile=null;
+	{
+		try {
+			htmlTemplateFile = new ClassPathResource("templates/receipt.html").getFile();
 
-    {
-        try {
-            file = new ClassPathResource("templates/receipt.html").getFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
 
 }
