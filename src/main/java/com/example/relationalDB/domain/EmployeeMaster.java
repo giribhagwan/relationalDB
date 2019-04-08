@@ -1,6 +1,5 @@
 package com.example.relationalDB.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
@@ -14,8 +13,6 @@ public class EmployeeMaster {
     private String empName;
     private String empDesignation;
     private String empDepartment;
-
-
 
 
     public Long getId() {

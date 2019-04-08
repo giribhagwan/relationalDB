@@ -31,4 +31,6 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     compile "com.itextpdf:html2pdf:2.0.1"
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
+	testCompile group: 'com.h2database', name: 'h2', version: '1.0.60'
+    
 }
