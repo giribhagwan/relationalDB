@@ -4,7 +4,7 @@ public class TaskDto {
 
     private String taskTitle;
     private String taskDetail;
-    private Long empId;
+    private String empId;
 
     public String getTaskTitle() {
         return taskTitle;
@@ -22,11 +22,13 @@ public class TaskDto {
         this.taskDetail = taskDetail;
     }
 
-    public Long getEmpId() {
-        return empId;
-    }
+	public String getEmpId() {
+		return empId;
+	}
 
-    public void setEmpId(Long empId) {
-        this.empId = empId;
-    }
+	public void setEmpId(String empId) {
+		this.empId = empId;
+	}
+
+   
 }

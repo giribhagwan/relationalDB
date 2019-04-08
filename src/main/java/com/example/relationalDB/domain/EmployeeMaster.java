@@ -9,22 +9,32 @@ import javax.persistence.*;
 public class EmployeeMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty("empId")
-    private Long empId;
+    private Long id;
+    private String empId;
     private String empName;
     private String empDesignation;
     private String empDepartment;
 
 
-    public Long getEmpId() {
-        return empId;
-    }
 
-    public void setEmpId(Long empId) {
-        this.empId = empId;
-    }
 
-    public String getEmpName() {
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(String empId) {
+		this.empId = empId;
+	}
+
+	public String getEmpName() {
         return empName;
     }
 

@@ -1,12 +1,14 @@
 package com.example.relationalDB.controller;
 
-import com.example.relationalDB.domain.Task;
 import com.example.relationalDB.services.EmployeeDto;
 import com.example.relationalDB.services.EmployeeServices;
-import com.example.relationalDB.services.TaskDto;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,17 +24,16 @@ import static com.example.relationalDB.config.Constants.TASK_DTO;
 @RequestMapping("/api/employee")
 public class EmployeeController {
 
-    @Autowired
-    EmployeeServices employeeServices;
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	@Autowired
+	EmployeeServices employeeServices;
 
-    Map<String, Object> responseMap = new HashMap<>();
-    @PostMapping("/updateEmployee")
-    public Callable<ResponseEntity<?>> updateEmp(EmployeeDto employeeDto) {
-        return () -> {
-            responseMap.clear();
-            responseMap.put(STATUS, SUCCESS);
-            responseMap.put(TASK_DTO, employeeServices.save(employeeDto));
-            return ResponseEntity.ok(responseMap);
-        };
-    }
+	@PostMapping("/saveEmployee")
+	public ResponseEntity<?> saveEmp(@RequestBody EmployeeDto employeeDto) {
+		Map<String, Object> responseMap = new HashMap<>();
+		logger.info(employeeDto.toString());
+		responseMap.put(STATUS, SUCCESS);
+		responseMap.put(TASK_DTO, employeeServices.save(employeeDto));
+		return ResponseEntity.ok(responseMap);
+	}
 }
