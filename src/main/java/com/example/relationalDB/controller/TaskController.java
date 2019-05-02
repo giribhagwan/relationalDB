@@ -1,6 +1,6 @@
 package com.example.relationalDB.controller;
 
-import com.example.relationalDB.domain.Task;
+import com.example.relationalDB.domain.employee.Task;
 import com.example.relationalDB.receipt.ReceiptGeneration;
 import com.example.relationalDB.services.TaskDto;
 import com.example.relationalDB.services.TaskService;

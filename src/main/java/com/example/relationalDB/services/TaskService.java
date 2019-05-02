@@ -1,6 +1,6 @@
 package com.example.relationalDB.services;
 
-import com.example.relationalDB.domain.Task;
+import com.example.relationalDB.domain.employee.Task;
 
 public interface TaskService {
 

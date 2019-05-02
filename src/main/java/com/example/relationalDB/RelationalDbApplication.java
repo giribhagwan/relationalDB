@@ -7,8 +7,8 @@ import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication
 //@PropertySources({
-//	@PropertySource(ignoreResourceNotFound = true, value = "file:src/main/config/application.properties"),
-//	@PropertySource(ignoreResourceNotFound = true, value = "file:config/application.properties") 
+//	@PropertySource(ignoreResourceNotFound = true, value = "file:/src/main/config/application.properties"),
+//	@PropertySource(ignoreResourceNotFound = true, value = "file:config/application.properties")
 //	})
 public class RelationalDbApplication {
 

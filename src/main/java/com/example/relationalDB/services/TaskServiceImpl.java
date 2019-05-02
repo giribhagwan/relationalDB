@@ -1,8 +1,8 @@
 package com.example.relationalDB.services;
 
-import com.example.relationalDB.domain.Task;
-import com.example.relationalDB.repositries.EmployeeMasterRepo;
-import com.example.relationalDB.repositries.TaskRepo;
+import com.example.relationalDB.domain.employee.Task;
+import com.example.relationalDB.repositries.employee.EmployeeMasterRepo;
+import com.example.relationalDB.repositries.employee.TaskRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

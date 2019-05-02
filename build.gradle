@@ -32,5 +32,9 @@ dependencies {
     compile "com.itextpdf:html2pdf:2.0.1"
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
 	testCompile group: 'com.h2database', name: 'h2', version: '1.0.60'
-    
+    compile group:'com.google.guava',name:'guava',version:'21.0'
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    compile group: 'com.h2database', name: 'h2'
+
+
 }
