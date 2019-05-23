@@ -32,7 +32,7 @@ public class EmployeeConfig {
     public LocalContainerEntityManagerFactoryBean productEntityManager() {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(productDataSource());
-        em.setPackagesToScan("com.example.relationalDB.repositries.employee");
+        em.setPackagesToScan("com.example.relationalDB.domain.employee");
 
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

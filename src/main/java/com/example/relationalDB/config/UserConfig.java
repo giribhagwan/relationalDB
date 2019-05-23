@@ -33,7 +33,7 @@ public class UserConfig {
         System.out.println("loading config");
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(userDataSource());
-        em.setPackagesToScan("com.example.relationalDB.repositries.user");
+        em.setPackagesToScan("com.example.relationalDB.domain.user");
 
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
